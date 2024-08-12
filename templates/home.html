@@ -1,11 +1,200 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zxx">
+{% load static %}
 <head>
     <meta charset="UTF-8">
+    <meta name="description" content="Videograph Template">
+    <meta name="keywords" content="Videograph, unica, creative, html">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>TATU Sam f</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/elegant-icons.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/magnific-popup.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/slicknav.min.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css">
 </head>
+
 <body>
-    <h1>Salom Bektosh aka</h1>
+    <!-- Page Preloder -->
+    <div id="preloder">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Header Section Begin -->
+    <header class="header">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-2">
+                    <div class="header__logo">
+                        <a href="">TATU Sam f.</a>
+                    </div>
+                </div>
+                <div class="col-lg-10">
+                    <div class="header__nav__option">
+                        <nav class="header__nav__menu mobile-menu">
+                            <!-- <ul>
+                                <li><a href="">Home</a></li>
+                                <li><a href="">About</a></li>
+                                <li class="active"><a href="">Portfolio</a></li>
+                                <li><a href="">Services</a></li>
+                                <li><a href="#">Pages</a>
+                                    <ul class="dropdown">
+                                        <li><a href="">About</a></li>
+                                        <li><a href="">Portfolio</a></li>
+                                        <li><a href="">Blog</a></li>
+                                        <li><a href="">Blog Details</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="">Contact</a></li>
+                            </ul> -->
+                        </nav>
+                        <div class="header__nav__social">
+                            <a href="https://www.facebook.com/sbtuit"><i class="fa fa-facebook"></i></a>
+                            <a href="https://t.me/sbtuit2005"><i class="fa fa-telegram"></i></a>
+                            <a href="https://www.instagram.com/sbtuit2005"><i class="fa fa-instagram"></i></a>
+                            <a href="https://www.youtube.com/channel/UC3qC0MK0LZekkRvJd8TflxQ"><i class="fa fa-youtube-play"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="mobile-menu-wrap"></div>
+        </div>
+    </header>
+    <!-- Header End -->
+
+
+    <!-- Portfolio Section Begin -->
+    <section class="portfolio spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <ul class="portfolio__filter">
+                        <li class="active" data-filter="*">All</li>
+                        {% for name in videos %}
+                        <li data-filter=".{{name.name|lower}}">{{name.name}}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+            <div class="row portfolio__gallery">
+                {% for video in videos %}
+                <div class="col-lg-4 col-md-6 col-sm-6 mix video">
+                    <div class="portfolio__item">
+                        <div class="portfolio__item__video set-bg" data-setbg="{{video.get_live_img}}">
+                            <a href="{{video.live_url}}" class="play-btn video-popup"><i
+                                    class="fa fa-play"></i></a>
+                        </div>
+                        <div class="portfolio__item__text">
+                            <h4>{{video.description}}</h4>
+                            <ul>
+                                <li>{{video.name}}</li>
+                                <!-- <li>Magento</li> -->
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+            <!-- <div class="row">
+                <div class="col-lg-12">
+                    <div class="pagination__option">
+                        <a href="#" class="arrow__pagination left__arrow"><span class="arrow_left"></span> Prev</a>
+                        <a href="#" class="number__pagination">1</a>
+                        <a href="#" class="number__pagination">2</a>
+                        <a href="#" class="arrow__pagination right__arrow">Next <span class="arrow_right"></span></a>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+    </section>
+    <!-- Portfolio Section End -->
+
+    <!-- Footer Section Begin -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__top">
+                <div class="row">
+                    <div class="col-lg-6 col-md-6">
+                        <div class="footer__top__logo">
+                            <a href="#"><img src="img/logo.png" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                        <div class="footer__top__social">
+                            <a href="https://www.facebook.com/sbtuit"><i class="fa fa-facebook"></i></a>
+                            <a href="https://t.me/sbtuit2005"><i class="fa fa-telegram"></i></a>
+                            <a href="https://www.instagram.com/sbtuit2005"><i class="fa fa-instagram"></i></a>
+                            <a href="https://www.youtube.com/channel/UC3qC0MK0LZekkRvJd8TflxQ"><i class="fa fa-youtube-play"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__option">
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 col-sm-6">
+                        <div class="footer__option__item">
+                            <h5>TATU | Samarand filiali</h5>
+                            <p>Muhammad al-Xorazmiy nomidagi TATU Samarqand filiali Oʼzbekiston Respublikasi Prezidentining 2005 yil 2 iyundagi «Axborot texnologiyalari sohasida kadrlar tayyorlash tizimini takomillashtirish toʼgʼrisida» PQ - 91 Qaroriga muvofiq tashkil etilgan.Hozirda Filial tasarrufida 3 ta oʼquv bino va talabalar turar joyi uchun 1 ta bino bor.</p>
+                            <a href="https://samtuit.uz/uz/page/about-branch-20-02-2024" class="read__more">Batafsil <span class="arrow_right"></span></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-3 col-sm-3">
+                        <div class="footer__option__item">
+                            <h5>Tuzilma</h5>
+                            <ul>
+                                <li><a href="#">Umumiy ma'lumot</a></li>
+                                <li><a href="#">Universitet nizomi</a></li>
+                                <li><a href="#">Rahbariyat</a></li>
+                                <li><a href="#">Fakultetlar</a></li>
+                                <li><a href="#">Kafedralar</a></li>
+                                <li><a href="#">Bo'lim va markazlar</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-3 col-sm-3">
+                        <div class="footer__option__item">
+                            <h5>Faoliyat</h5>
+                            <ul>
+                                <li><a href="#">Ilmiy faoliyat</a></li>
+                                <li><a href="#">Xalqaro faoliyat</a></li>
+                                <li><a href="#">Moliyaviy faoliyat</a></li>
+                                <li><a href="#">Madaniy-ma'rifiy faoliyat</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-12">
+                        <div class="footer__option__item">
+                            <h5>Bizning Manzil</h5>
+                            <p> <a href=""> <i class="fa fa-map"></i> Samarqand shahar Ibn Sino ko'chasi 2 A uy</a></p>
+                            <p> <a href=""> <i class="fa fa-phone"></i> +998 (66) 232 2929</a></p>
+                            <p> <a href=""> <i class="fa fa-envelope"></i> info@samtuit.uz</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer Section End -->
+
+    <!-- Js Plugins -->
+    <script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
+    <script src="{% static 'js/mixitup.min.js' %}"></script>
+    <script src="{% static 'js/masonry.pkgd.min.js' %}"></script>
+    <script src="{% static 'js/jquery.slicknav.js' %}"></script>
+    <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'js/main.js' %}"></script>
 </body>
+
 </html>
