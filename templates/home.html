@@ -67,7 +67,7 @@
                     </div>
                 </div>
             </div>
-            <div id="mobile-menu-wrap"></div>
+            
         </div>
     </header>
     <!-- Header End -->
@@ -79,16 +79,13 @@
             <div class="row">
                 <div class="col-lg-12">
                     <ul class="portfolio__filter">
-                        <li class="active" data-filter="*">All</li>
-                        {% for name in videos %}
-                        <li data-filter=".{{name.name|lower}}">{{name.name}}</li>
-                        {% endfor %}
+                        <li class="active" data-filter="*">TATU Samarqand filiali</li>
                     </ul>
                 </div>
             </div>
             <div class="row portfolio__gallery">
                 {% for video in videos %}
-                <div class="col-lg-4 col-md-6 col-sm-6 mix video">
+                <div class="col-lg-6 col-md-6 col-sm-6 mix video">
                     <div class="portfolio__item">
                         <div class="portfolio__item__video set-bg" data-setbg="{{video.get_live_img}}">
                             <a href="{{video.live_url}}" class="play-btn video-popup"><i
@@ -125,9 +122,7 @@
             <div class="footer__top">
                 <div class="row">
                     <div class="col-lg-6 col-md-6">
-                        <div class="footer__top__logo">
-                            <a href="#"><img src="img/logo.png" alt=""></a>
-                        </div>
+                       
                     </div>
                     <div class="col-lg-6 col-md-6">
                         <div class="footer__top__social">
@@ -152,12 +147,12 @@
                         <div class="footer__option__item">
                             <h5>Tuzilma</h5>
                             <ul>
-                                <li><a href="#">Umumiy ma'lumot</a></li>
-                                <li><a href="#">Universitet nizomi</a></li>
-                                <li><a href="#">Rahbariyat</a></li>
-                                <li><a href="#">Fakultetlar</a></li>
-                                <li><a href="#">Kafedralar</a></li>
-                                <li><a href="#">Bo'lim va markazlar</a></li>
+                                <li><a href="https://samtuit.uz/public/uz">Umumiy ma'lumot</a></li>
+                                <li><a href="https://samtuit.uz/uz/page/branch-charter-17-12-2021">Universitet nizomi</a></li>
+                                <li><a href="https://samtuit.uz/uz/page/administration-09-12-2021">Rahbariyat</a></li>
+                                <li><a href="https://samtuit.uz/uz/page/faculties-11-08-2021">Fakultetlar</a></li>
+                                <li><a href="https://samtuit.uz/uz/page/departments-09-12-2021">Kafedralar</a></li>
+                                <li><a href="https://samtuit.uz/uz/page/departments-and-centers-18-12-2021">Bo'lim va markazlar</a></li>
                             </ul>
                         </div>
                     </div>
@@ -165,18 +160,18 @@
                         <div class="footer__option__item">
                             <h5>Faoliyat</h5>
                             <ul>
-                                <li><a href="#">Ilmiy faoliyat</a></li>
-                                <li><a href="#">Xalqaro faoliyat</a></li>
-                                <li><a href="#">Moliyaviy faoliyat</a></li>
-                                <li><a href="#">Madaniy-ma'rifiy faoliyat</a></li>
+                                <li><a href="https://samtuit.uz/uz/page/scientific-activity-03-08-2023">Ilmiy faoliyat</a></li>
+                                <li><a href="https://samtuit.uz/uz/page/international-relations-03-08-2023">Xalqaro faoliyat</a></li>
+                                <li><a href="https://samtuit.uz/uz/page/financial-activities-03-08-2023">Moliyaviy faoliyat</a></li>
+                                <li><a href="https://samtuit.uz/uz/page/cultural-and-educational-activities-03-08-2023">Madaniy-ma'rifiy faoliyat</a></li>
                             </ul>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-12">
                         <div class="footer__option__item">
                             <h5>Bizning Manzil</h5>
-                            <p> <a href=""> <i class="fa fa-map"></i> Samarqand shahar Ibn Sino ko'chasi 2 A uy</a></p>
-                            <p> <a href=""> <i class="fa fa-phone"></i> +998 (66) 232 2929</a></p>
+                            <p> <a href="https://www.google.com/maps/search/Toshkent+Axborot+va+Texnologiya+Universiteti+Samarkand+Filiali+Samarqand+Samarqand+viloyati/@39.679939,66.981454,16z?hl=ru&entry=ttu"> <i class="fa fa-map"></i> Samarqand shahar Ibn Sino ko'chasi 2 A uy</a></p>
+                            <p> <a href="https://samtuit.uz/uz/contact"> <i class="fa fa-phone"></i> +998 (66) 232 2929</a></p>
                             <p> <a href=""> <i class="fa fa-envelope"></i> info@samtuit.uz</a></p>
                         </div>
                     </div>
